@@ -129,9 +129,9 @@ GEM
       raabro (~> 1.4)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    hotwire-spark (0.1.4)
+    hotwire-spark (0.1.12)
       listen
-      rails (>= 8.0.0)
+      rails (>= 7.0.0)
       zeitwerk
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
@@ -180,6 +180,7 @@ GEM
       date
       net-protocol
     net-pop (0.1.2)
+      net-protocol
     net-protocol (0.2.2)
       timeout
     net-scp (4.0.0)
