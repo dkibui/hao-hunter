@@ -1,0 +1,25 @@
+nav {
+    background-color: var(--muted-background-color);
+    padding-top: 0.85rem;
+    padding-bottom: 0.75rem;
+
+    svg {
+        max-width: 160px;
+    }
+
+    a {
+        display: inline-block;
+        height: fit-content;
+        text-decoration: none;
+        text-underline-offset: 0;
+        margin-bottom: -5px;
+    }
+
+    .nav-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+}

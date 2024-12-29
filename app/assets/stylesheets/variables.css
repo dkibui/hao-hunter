@@ -1,0 +1,22 @@
+:root {
+    --primary-color: #0271e3;
+    --secondary-color: #ffb20fff;
+    --on-primary-color: #f4f2f3ff;
+    --muted-background-color: #fafafa;
+    --border-color-normal: #cececf;
+    --danger: #da2130;
+
+    --garnet: ff4b3eff;
+    --gray: #6c6c6c;
+
+    --brand-font: Inter, sans-serif;
+    --brand-font-weight: 400;
+    --brand-font-weight-bold: 700;
+    --brand-line-height: 1.3;
+
+    /* Accent notice colours */
+    --success: #e5eed1;
+    --warning: #ffc9c9;
+    --info: #d1e8f0;
+    --alert: #fff4c9;
+}

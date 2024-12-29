@@ -1,0 +1,123 @@
+.users {
+    margin-top: 2.5rem;
+
+    h1 {
+        text-align: center;
+        margin-block-end: 2.125rem;
+    }
+
+    .users-form-wrapper {
+        border-radius: 1.125rem;
+        padding: 3.25rem 2.125rem;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        border: 1px solid var(--border-color-normal);
+        background-color: white;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.525rem;
+            margin-bottom: 1.5rem;
+
+            label {
+                display: block;
+                width: 100%;
+                margin-bottom: 0.35rem;
+            }
+
+            :is(input[type="text"], input[type="email"], input[type="password"]) {
+                display: block;
+                min-height: 40px;
+                font-size: 1rem;
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid var(--border-color-normal);
+            }
+
+            :is(input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus) {
+                outline: none;
+                border-bottom: 1px solid color-mix(in oklab, var(--border-color-normal) 98%, white 2%);
+            }
+
+            .remember-me {
+                display: flex;
+                align-items: center;
+                gap: 0.625rem;
+
+                input {
+                    margin: 0;
+                }
+
+                label {
+                    margin: 0;
+                }
+            }
+
+            input[type="submit"] {
+                background-color: var(--primary-color);
+                padding: 0 1.525rem;
+                border: none;
+                border-radius: 525rem;
+                color: var(--on-primary-color);
+                font-size: 1.1rem;
+                min-height: 52px;
+                width: 100%;
+                margin-top: 2.125rem;
+                margin-bottom: 0.525rem;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .password-guide {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            flex-wrap: wrap;
+
+            label {
+                width: fit-content;
+                margin: 0;
+            }
+
+            small {
+                color: var(--gray);
+            }
+        }
+
+        .shared-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.875rem;
+            flex-wrap: wrap;
+            margin-top: 1.25rem;
+
+            a {
+                color: var(--primary-color);
+                text-decoration: none;
+                text-underline-offset: 4px;
+                transition: all 0.3s;
+            }
+
+            a:hover {
+                text-decoration: underline;
+                text-underline-offset: 7px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 760px) {
+    .users {
+        margin-top: 3.5rem;
+    }
+}
+
+@media screen and (min-width: 920px) {
+    .users {
+        margin-top: 5rem;
+    }
+}

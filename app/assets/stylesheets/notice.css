@@ -1,0 +1,24 @@
+.notices {
+    &:has(.success) {
+        background-color: var(--success);
+    }
+
+    &:has(.warning) {
+        background-color: var(--warning);
+    }
+
+    &:has(.info) {
+        background-color: var(--info);
+    }
+
+    &:has(.alert) {
+        background-color: var(--alert);
+    }
+
+    .flash {
+        small {
+            display: block;
+            padding: 0.75rem 0;
+        }
+    }
+}

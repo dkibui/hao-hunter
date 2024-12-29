@@ -1,0 +1,18 @@
+.footer-navigation {
+    margin-top: auto;
+    padding: 0.25rem 0;
+    background-color: #dfe5ea;
+    border-top: 1px solid var(--border-color-normal);
+
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    h2 {
+        margin: 0;
+    }
+}
