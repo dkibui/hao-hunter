@@ -1,19 +1,19 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  rent_amount: 1.5
-  bedrooms: 1
-  bathrooms: 1
+  title: The East Horizon Resort
+  rent_amount: 15000
+  bedrooms: 26
+  bathrooms: 20
   latitude: 1.5
   longitude: 1.5
-  is_available: false
+  is_available: true
 
 two:
-  title: MyString
-  rent_amount: 1.5
-  bedrooms: 1
-  bathrooms: 1
+  title: Hill View Arcade
+  rent_amount: 25000
+  bedrooms: 4
+  bathrooms: 5
   latitude: 1.5
   longitude: 1.5
-  is_available: false
+  is_available: true

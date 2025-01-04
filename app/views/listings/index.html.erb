@@ -2,8 +2,13 @@
   <h1>All listings</h1>
   <% @listings.each do |listing| %>
   <div class="card">
-    <h2><%= listing.title %></h2>
+    <h2><%= link_to listing.title, listing %></h2>
     <p>Bedrooms: <%= listing.bedrooms %></p>
+    <% if listing.is_available %>
+      <p>Available</p>
+    <% else %>
+      <button>Notify me when available</button>
+    <% end %>
   </div>
   <% end %>
 </div>

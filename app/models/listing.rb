@@ -1,3 +1,3 @@
 class Listing < ApplicationRecord
-  validates :title, :bedrooms, :bathrooms, :is_available,  presence: true
+  validates :title, :bedrooms, :bathrooms,  presence: true
 end
