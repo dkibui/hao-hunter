@@ -1,5 +1,6 @@
 <div class="container">
   <h1>All listings</h1>
+  <%= link_to "New listing", new_listing_path %>
   <% @listings.each do |listing| %>
   <div class="card">
     <h2><%= link_to listing.title, listing %></h2>

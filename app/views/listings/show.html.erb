@@ -1,6 +1,11 @@
 <div class="container">
   <h1><%= @listing.title %></h1>
+  <p><%= @listing.description %></p>
   <div class="card">
+    <p>Bathrooms: <%= @listing.bathrooms %></p>
     <p>Bedrooms: <%= @listing.bedrooms %></p>
   </div>
+  <%= link_to "Edit listing", edit_listing_path %>
+  <%= button_to "Delete listing", @listing, method: :delete, data: {
+    turbo_confirm: "Are you sure?" } %>
 </div>
