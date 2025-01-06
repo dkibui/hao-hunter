@@ -1,7 +1,7 @@
 form {
     display: flex;
     flex-direction: column;
-    row-gap: 1.525rem;
+    row-gap: 1.875rem;
 
     label {
         display: block;
@@ -70,6 +70,10 @@ form {
             :is(input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus) {
                 outline: none;
                 border-bottom: 1px solid color-mix(in oklab, var(--border-color-normal) 98%, white 2%);
+            }
+
+            input[type="submit"] {
+                margin-top: 1.7525rem;
             }
 
             .remember-me {

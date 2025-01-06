@@ -1,7 +1,6 @@
 nav {
     background-color: var(--muted-background-color);
-    padding-top: 0.85rem;
-    padding-bottom: 0.75rem;
+    padding: 1.5rem;
 
     svg {
         max-width: 160px;

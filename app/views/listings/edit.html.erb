@@ -1,5 +1,10 @@
 <div class="container">
-  <h1>Edit listing</h1>
+  <div class="listing">
+    <div class="listing__edit">
+      <h1>Editing...</h1>
+      <small>(<%= @listing.title %>)</small>
 
-  <%= render "form", listing: @listing %>
+      <%= render "form", listing: @listing %>
+    </div>
+    </div>
 </div>

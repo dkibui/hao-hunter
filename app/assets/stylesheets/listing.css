@@ -1,0 +1,25 @@
+.listing {
+    .listing__edit {
+        h1 {
+            margin-bottom: 0.25rem;
+        }
+
+        small {
+            display: block;
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+        }
+    }
+}
+
+@media screen and (min-width: 760px) {
+    .listing {
+        margin-top: 3.5rem;
+    }
+}
+
+@media screen and (min-width: 920px) {
+    .listing {
+        margin-top: 5rem;
+    }
+}

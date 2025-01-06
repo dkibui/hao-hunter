@@ -1,11 +1,21 @@
 <div class="container">
-  <h1><%= @listing.title %></h1>
-  <p><%= @listing.description %></p>
-  <div class="card">
-    <p>Bathrooms: <%= @listing.bathrooms %></p>
-    <p>Bedrooms: <%= @listing.bedrooms %></p>
+  <div class="listing">
+    <h1><%= @listing.title %></h1>
+    <p><%= @listing.description %></p>
+
+    <div>
+      <% if @listing.images.attached? %>
+        <div class="listing-images">
+          <% @listing.images.each do |image| %>
+            <%= image_tag(image, alt: "Listing Image", class: "listing-image") %>
+          <% end %>
+        </div>
+      <% else %>
+        <p>No images available for this listing.</p>
+      <% end %>
+      <%= link_to "Edit listing", edit_listing_path %>
+      <%= button_to "Delete listing", @listing, method: :delete, data: {
+        turbo_confirm: "Are you sure?" } %>
+    </div>
   </div>
-  <%= link_to "Edit listing", edit_listing_path %>
-  <%= button_to "Delete listing", @listing, method: :delete, data: {
-    turbo_confirm: "Are you sure?" } %>
 </div>

@@ -44,7 +44,7 @@ class ListingsController < ApplicationController
   end
 
   def listing_params
-    params.expect(listing: %i[ title description rent_amount bedrooms
-    bathrooms latitude longitude is_available ])
+    params.expect(listing: [ :title, :description, :rent_amount, :bedrooms,
+                            :bathrooms, :latitude, :longitude, images: [] ])
   end
 end

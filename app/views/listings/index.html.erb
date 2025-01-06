@@ -1,15 +1,18 @@
 <div class="container">
-  <h1>All listings</h1>
-  <%= link_to "New listing", new_listing_path %>
-  <% @listings.each do |listing| %>
-  <div class="card">
-    <h2><%= link_to listing.title, listing %></h2>
-    <p>Bedrooms: <%= listing.bedrooms %></p>
-    <% if listing.status %>
-      <p>Available</p>
-    <% else %>
-      <button>Notify me when available</button>
+  <div class="listing">
+    <h1>All listings</h1>
+    <%= link_to "New listing", new_listing_path %>
+    <% @listings.each do |listing| %>
+      <div class="card">
+        <h2><%= link_to listing.title, listing %></h2>
+        <p>ID: <%= listing.id %></p>
+        <p>Bedrooms: <%= listing.bedrooms %></p>
+        <% if listing.status %>
+          <p>Available</p>
+        <% else %>
+          <button>Notify me when available</button>
+        <% end %>
+      </div>
     <% end %>
   </div>
-  <% end %>
 </div>

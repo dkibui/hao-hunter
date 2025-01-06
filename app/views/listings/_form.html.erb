@@ -8,6 +8,12 @@
       <%= form.label :description %>
       <%= form.rich_text_area :description %>
     </div>
+
+    <div>
+      <%= form.label :images %>
+      <%= form.file_field :images, accept: "image/*", multiple: true %>
+    </div>
+
     <div>
       <%= form.label :rent_amount %>
       <%= form.number_field :rent_amount, step: "0.01", min: 0 %>
@@ -21,10 +27,6 @@
         <%= form.label :bathrooms %>
         <%= form.number_field :bathrooms, step: "1", min: 0 %>
       </div>
-    </div>
-    <div>
-      <%= form.label :status, "Status" %>
-      <%= form.check_box :status %>
     </div>
 
     <div>
