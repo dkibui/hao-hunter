@@ -7,7 +7,7 @@ one:
   bathrooms: 20
   latitude: 1.5
   longitude: 1.5
-  is_available: true
+  status: true
 
 two:
   title: Hill View Arcade
@@ -16,4 +16,4 @@ two:
   bathrooms: 5
   latitude: 1.5
   longitude: 1.5
-  is_available: true
+  status: true

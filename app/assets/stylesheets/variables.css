@@ -19,4 +19,11 @@
     --warning: #ffc9c9;
     --info: #d1e8f0;
     --alert: #fff4c9;
+
+    /* Media screen breakpoints */
+    --small: 640px;
+    --medium: 768px;
+    --large: 1024px;
+    --extra-large: 1280px;
+    --2-extra-large: 1536px;
 }

@@ -149,14 +149,20 @@ form {
     }
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 640px) {
     .users {
         margin-top: 3.5rem;
     }
 }
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 768px) {
     .users {
         margin-top: 5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .users {
+        margin-top: 7.2rem;
     }
 }

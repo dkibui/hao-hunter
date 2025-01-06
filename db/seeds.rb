@@ -7,22 +7,22 @@ Listing.destroy_all
 
 listings = [
   {
-    title: "Spacious 2-Bedroom Apartment in Nairobi",
+    title: "Spacious 2 Bedroom Apartment in Nairobi",
     rent_amount: 50000.0,
     bedrooms: 2,
     bathrooms: 2,
     latitude: -1.286389,
     longitude: 36.817223,
-    is_available: true
+    status: true
   },
   {
     title: "Modern Studio Apartment in Westlands",
     rent_amount: 30000.0,
-    bedrooms: 1,
-    bathrooms: 1,
+    bedrooms: 4,
+    bathrooms: 4,
     latitude: -1.265962,
     longitude: 36.792396,
-    is_available: true
+    status: true
   },
   {
     title: "3-Bedroom Family Home in Karen",
@@ -31,7 +31,7 @@ listings = [
     bathrooms: 4,
     latitude: -1.309717,
     longitude: 36.690578,
-    is_available: false
+    status: false
   }
 ]
 

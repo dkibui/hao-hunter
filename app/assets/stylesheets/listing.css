@@ -1,4 +1,6 @@
 .listing {
+    margin-top: 2rem;
+
     .listing__edit {
         h1 {
             margin-bottom: 0.25rem;
@@ -12,14 +14,20 @@
     }
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 640px) {
     .listing {
         margin-top: 3.5rem;
     }
 }
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 768px) {
     .listing {
         margin-top: 5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .listing {
+        margin-top: 7.2rem;
     }
 }
