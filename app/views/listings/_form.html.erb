@@ -1,30 +1,34 @@
-<%= form_with model: listing do |form| %>
-  <div>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-  <div>
-    <%= form.label :description %>
-    <%= form.rich_text_area :description %>
-  </div>
-  <div>
-    <%= form.label :rent_amount %>
-    <%= form.number_field :rent_amount, step: "0.01", min: 0 %>
-  </div>
-  <div>
-    <%= form.label :bedrooms %>
-    <%= form.number_field :bedrooms, step: "1", min: 0 %>
-  </div>
-  <div>
-    <%= form.label :bathrooms %>
-    <%= form.number_field :bathrooms, step: "1", min: 0 %>
-  </div>
-  <div>
-    <%= form.label :is_available, "Is available" %>
-    <%= form.check_box :is_available %>
-  </div>
+<div class="listing">
+  <%= form_with model: listing do |form| %>
+    <div>
+      <%= form.label :title %>
+      <%= form.text_field :title, autofocus: "autofocus" %>
+    </div>
+    <div>
+      <%= form.label :description %>
+      <%= form.rich_text_area :description %>
+    </div>
+    <div>
+      <%= form.label :rent_amount %>
+      <%= form.number_field :rent_amount, step: "0.01", min: 0 %>
+    </div>
+    <div class="numbers-inputs">
+      <div>
+        <%= form.label :bedrooms %>
+        <%= form.number_field :bedrooms, step: "1", min: 0 %>
+      </div>
+      <div>
+        <%= form.label :bathrooms %>
+        <%= form.number_field :bathrooms, step: "1", min: 0 %>
+      </div>
+    </div>
+    <div>
+      <%= form.label :status, "Status" %>
+      <%= form.check_box :status %>
+    </div>
 
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+    <div>
+      <%= form.submit %>
+    </div>
+  <% end %>
+</div>

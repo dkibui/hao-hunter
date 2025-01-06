@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_01_05_050657) do
+ActiveRecord::Schema[8.0].define(version: 2025_01_06_080053) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -59,7 +59,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_05_050657) do
     t.integer "bathrooms"
     t.float "latitude"
     t.float "longitude"
-    t.boolean "is_available"
+    t.boolean "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

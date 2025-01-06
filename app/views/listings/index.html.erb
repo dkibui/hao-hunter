@@ -5,7 +5,7 @@
   <div class="card">
     <h2><%= link_to listing.title, listing %></h2>
     <p>Bedrooms: <%= listing.bedrooms %></p>
-    <% if listing.is_available %>
+    <% if listing.status %>
       <p>Available</p>
     <% else %>
       <button>Notify me when available</button>
