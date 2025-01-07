@@ -5,9 +5,9 @@
 
     <div>
       <% if @listing.images.attached? %>
-        <div class="listing-images">
+        <div class="list-images">
           <% @listing.images.each do |image| %>
-            <%= image_tag(image, alt: "Listing Image", class: "listing-image") %>
+            <%= image_tag(image, alt: "Listing Image", class: "list-image") %>
           <% end %>
         </div>
       <% else %>

@@ -1,5 +1,5 @@
 nav {
-    background-color: var(--muted-background-color);
+    background-color: var(--primary-color);
     padding: 1.5rem;
 
     svg {
@@ -7,11 +7,16 @@ nav {
     }
 
     a {
+        color: white;
         display: inline-block;
         height: fit-content;
         text-decoration: none;
-        text-underline-offset: 0;
-        margin-bottom: -5px;
+        text-underline-offset: 3px;
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
     }
 
     .nav-menu {
