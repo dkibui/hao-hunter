@@ -5,13 +5,9 @@
 
     <div>
       <% if @listing.images.attached? %>
-        <div class="list-images">
-          <% @listing.images.each do |image| %>
-            <%= image_tag(image, alt: "Listing Image", class: "list-image") %>
-          <% end %>
-        </div>
+        <%= render_grouped_images(@listing.images) %>
       <% else %>
-        <p>No images available for this listing.</p>
+        <p>Listing has no images</p>
       <% end %>
       <%= link_to "Edit listing", edit_listing_path %>
       <%= button_to "Delete listing", @listing, method: :delete, data: {
