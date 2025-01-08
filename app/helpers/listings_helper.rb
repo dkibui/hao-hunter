@@ -5,7 +5,8 @@ module ListingsHelper
     prev_count = 0
 
     while i < array.length
-      count = [ 3, 1, 2, 1, 2, 1, 2, 4, 1 ].reject { |n| n == prev_count }.sample
+      count = [ 3, 1, 2, 3, 1, 2, 1, 2, 4, 1, 2 ].reject { |n| n == prev_count }
+                                            .sample
       result << array.slice(i, count)
       i += count
       prev_count = count

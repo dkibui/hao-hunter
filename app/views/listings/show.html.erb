@@ -9,9 +9,9 @@
       <% else %>
         <p>Listing has no images</p>
       <% end %>
-      <%= link_to "Edit listing", edit_listing_path %>
+      <%= link_to "Edit listing", edit_listing_path if user_signed_in? %>
       <%= button_to "Delete listing", @listing, method: :delete, data: {
-        turbo_confirm: "Are you sure?" } %>
+        turbo_confirm: "Are you sure?" } if user_signed_in? %>
     </div>
   </div>
 </div>
