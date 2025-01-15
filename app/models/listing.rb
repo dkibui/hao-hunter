@@ -21,13 +21,8 @@ class Listing < ApplicationRecord
 
     message = "The #{changes_to_track} of listing #{title}"
 
-    users_to_notify.each do |user|
-      Notification.create!(
-        user: user,
-        listing: self,
-        message: message
-      )
-    end
+    user_ids = users_to_notify.pluck(:id)
+    NotifyUsersJob.perform_later(self, message, user_ids)
 
     def users_to_notify
       User.joins(:notifications).where(notifications: { listing_id: id })
