@@ -56,15 +56,15 @@
             padding: 7px 12px 7px 12px;
         }
 
+        a {
+            text-decoration: none;
+            color: color-mix(in oklab, var(--gray) 80%, black 20%);
+        }
+
         h2 {
             font-weight: 400;
             font-size: 1rem;
             margin-bottom: 0;
-
-            a {
-                text-decoration: none;
-                color: color-mix(in oklab, var(--gray) 80%, black 20%);
-            }
         }
 
         h3 {
