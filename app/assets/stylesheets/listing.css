@@ -70,7 +70,7 @@
         h3 {
             color: color-mix(in oklab, var(--gray) 80%, black 20%);
             font-weight: 700;
-            font-size: 0.975rem;
+            font-size: 0.875rem;
             margin: 0;
         }
 
