@@ -1,7 +1,8 @@
 require "test_helper"
 
 class ListingTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should not save listing without title" do
+    listing = Listing.new
+    assert_not listing.save
+  end
 end
