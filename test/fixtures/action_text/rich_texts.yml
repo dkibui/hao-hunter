@@ -2,3 +2,14 @@
 #   record: name_of_fixture (ClassOfFixture)
 #   name: content
 #   body: <p>In a <i>million</i> stars!</p>
+listing_one_description:
+  name: description
+  body: "A beautiful and cozy apartment with modern amenities."
+  record_type: Listing
+  record_id: <%= ActiveRecord::FixtureSet.identify(:listing_one) %>
+
+listing_two_description:
+  name: description
+  body: "A luxurious villa with a private pool and garden."
+  record_type: Listing
+  record_id: <%= ActiveRecord::FixtureSet.identify(:listing_two) %>

@@ -4,10 +4,15 @@
 # model remove the "{}" from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one:
-  email: one@example.com
-  encrypted_password: $2a$12$4v6O8ZG9JfO/t0oY6cW2GeWqeF1R1JZxV9lvzQFyOhkTdh/U9s5Hy
 
-two:
-  email: two@example.com
-  encrypted_password: $2a$12$4v6O8ZG9JfO/t0oY6cW2GeWqeF1R1JZxV9lvzQFyOhkTdh/U9s5Hy
+john_doe:
+  email: john.doe@example.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %> # Simulating a hashed password
+  created_at: <%= Time.zone.now %>
+  updated_at: <%= Time.zone.now %>
+
+jane_doe:
+  email: jane.doe@example.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password456') %>
+  created_at: <%= Time.zone.now %>
+  updated_at: <%= Time.zone.now %>

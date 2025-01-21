@@ -1,33 +1,13 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 notification_one:
-  user: one  # references user fixture
-  listing: listing_one  # references listing fixture
-  message: "Your listing has received a new inquiry"
-  read_at: null
-  created_at: <%= Time.current %>
-  updated_at: <%= Time.current %>
+  user: john_doe
+  listing: listing_one
+  message: "New listing available!"
+  created_at: <%= Time.zone.now %>
+  updated_at: <%= Time.zone.now %>
 
 notification_two:
-  user: two
+  user: jane_doe
   listing: listing_two
-  message: "Someone saved your listing to their favorites"
-  read_at: <%= 2.days.ago %>
-  created_at: <%= 3.days.ago %>
-  updated_at: <%= 2.days.ago %>
-
-unread_notification:
-  user: one
-  listing: listing_three
-  message: "A new message about your listing"
-  read_at: null
-  created_at: <%= 1.day.ago %>
-  updated_at: <%= 1.day.ago %>
-
-old_notification:
-  user: two
-  listing: listing_one
-  message: "Price update alert for a similar listing"
-  read_at: <%= 1.week.ago %>
-  created_at: <%= 2.weeks.ago %>
-  updated_at: <%= 1.week.ago %>
+  message: "The rent amount has been updated."
+  created_at: <%= Time.zone.now %>
+  updated_at: <%= Time.zone.now %>
