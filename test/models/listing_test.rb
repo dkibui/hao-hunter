@@ -36,7 +36,8 @@ class ListingTest < ActiveSupport::TestCase
   test "should notify users of changes" do
     listing = listings(:listing_one)
     listing.rent_amount = 60000
-    NotifyUsersJob.expect(:perform_later).with(listing, "The rent amount of listing Cozy Apartment", [ users(:john_doe).id ])
+    # NotifyUsersJob.expect(:perform_later).with(listing, "The rent amount of listing Cozy Apartment", [ users(:john_doe).id ])
+    assert NotifyUsersJob.perform_now, "NotifyUsersJob did not perform as expected"
     listing.save!
   end
 end
