@@ -1,0 +1,13 @@
+notification_one:
+  user: john_doe
+  listing: listing_one
+  message: "New listing available!"
+  created_at: <%= Time.zone.now %>
+  updated_at: <%= Time.zone.now %>
+
+notification_two:
+  user: jane_doe
+  listing: listing_two
+  message: "The rent amount has been updated."
+  created_at: <%= Time.zone.now %>
+  updated_at: <%= Time.zone.now %>

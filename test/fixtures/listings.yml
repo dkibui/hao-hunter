@@ -1,19 +1,19 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+listing_one:
+  title: "Cozy Apartment"
+#  description: "A beautiful and cozy apartment with modern amenities."
+  bedrooms: 2
+  bathrooms: 1
+  rent_amount: 50000
+  status: published
+  created_at: <%= Time.zone.now %>
+  updated_at: <%= Time.zone.now %>
 
-one:
-  title: The East Horizon Resort
-  rent_amount: 15000
-  bedrooms: 26
-  bathrooms: 20
-  latitude: 1.5
-  longitude: 1.5
-  status: true
-
-two:
-  title: Hill View Arcade
-  rent_amount: 25000
+listing_two:
+  title: "Luxury Villa"
+#  description: "A luxurious villa with a private pool and garden."
   bedrooms: 4
-  bathrooms: 5
-  latitude: 1.5
-  longitude: 1.5
-  status: true
+  bathrooms: 3
+  rent_amount: 250000
+  status: draft
+  created_at: <%= Time.zone.now %>
+  updated_at: <%= Time.zone.now %>
