@@ -5,10 +5,12 @@
     <div class="cards-container">
       <% @listings.each do |listing| %>
         <div class="card">
-          <div class="image-wrapper">
-            <%= image_tag listing.images.first %>
-          </div>
-          <h2><%= link_to truncate(listing.title, length: 36), listing %></h2>
+          <%= link_to listing do %>
+            <div class="image-wrapper">
+              <%= image_tag listing.images.first %>
+            </div>
+            <h2><%= truncate(listing.title, length: 36) %></h2>
+          <% end %>
           <h3><%= number_to_currency(listing.rent_amount,
                                      precision: 2,
                                      delimiter: ",",
