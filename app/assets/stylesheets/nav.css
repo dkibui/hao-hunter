@@ -1,5 +1,44 @@
 nav.desktop {
     display: none;
+
+    .menu-links {
+        margin-right: auto;
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+
+            li {
+                list-style: none;
+            }
+        }
+    }
+}
+
+nav.mobile {
+    .menu-links {
+        background-color: var(--muted-background-color);
+        width: 75%;
+        padding: 2.25rem 1.25rem 1.25rem 2.25rem;
+        position: absolute;
+        z-index: 1000;
+        top: 0 ;
+        left: 0;
+        bottom: 0;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            margin: 0;
+            padding: 0;
+
+            li {
+                list-style: none;
+            }
+        }
+    }
 }
 
 nav {

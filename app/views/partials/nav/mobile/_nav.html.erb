@@ -6,6 +6,14 @@
     <div class="logo">
       <%= link_to raw(render "partials/logo"), root_path %>
     </div>
+    <div class="menu-links">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Properties</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
     <% if user_signed_in? %>
       <%= button_to "Logout", destroy_user_session_path, method: :delete %>
     <% else %>
