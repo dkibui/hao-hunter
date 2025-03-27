@@ -1,13 +1,18 @@
+nav.desktop {
+    display: none;
+}
+
 nav {
-    background-color: var(--primary-color);
+    background-color: color-mix(in oklab, var(--primary-color) 15%, white 85%);
     padding: 1.125rem;
 
-    svg {
+    .logo svg {
         max-width: 120px;
+        fill: var(--primary-color);
     }
 
     a {
-        color: white;
+        color: color-mix(in oklab, var(--charcoal) 80%, white 20%);
         display: inline-block;
         height: fit-content;
         text-decoration: none;
@@ -25,6 +30,11 @@ nav {
         justify-content: space-between;
         gap: 0.75rem;
         flex-wrap: wrap;
+
+        .hamburger-menu {
+            width: 28px;
+            stroke: color-mix(in oklab, var(--charcoal) 80%, white 20%);
+        }
     }
 
     button {
@@ -39,5 +49,15 @@ nav {
         &:hover {
             cursor: pointer;
         }
+    }
+}
+
+@media (min-width: 768px) {
+    nav.mobile {
+        display: none;
+    }
+
+    nav.desktop {
+        display: block;
     }
 }
