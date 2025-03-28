@@ -18,24 +18,41 @@ nav.desktop {
 
 nav.mobile {
     .menu-links {
-        background-color: var(--muted-background-color);
+        background-color: color-mix(in oklab, var(--primary-color) 8%, white 92%);
         width: 75%;
-        padding: 2.25rem 1.25rem 1.25rem 2.25rem;
+        padding: 2.85rem 0.5rem;
         position: absolute;
         z-index: 1000;
         top: 0 ;
         left: 0;
         bottom: 0;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        transform: translateX(-603px);
+        transition: transform 0.3s ease-in-out;
+
+        &.active {
+            transform: translateX(0);
+        }
 
         ul {
             display: flex;
             flex-direction: column;
-            gap: 2.5rem;
             margin: 0;
-            padding: 0;
+            padding: 2rem 0 0 0;
 
             li {
                 list-style: none;
+                padding: 1.25rem 0 1.25rem 0.6rem;
+                border-bottom: 1px solid var(--border-color-normal);
+
+                a {
+                    text-decoration: none;
+
+                    &:hover {
+
+                    }
+                }
             }
         }
     }
@@ -60,6 +77,7 @@ nav {
         &:hover {
             cursor: pointer;
             text-decoration: underline;
+            color: var(--primary-color);
         }
     }
 
@@ -73,6 +91,12 @@ nav {
         .hamburger-menu {
             width: 28px;
             stroke: color-mix(in oklab, var(--charcoal) 80%, white 20%);
+            z-index: 2000;
+            cursor: pointer;
+
+            &:hover {
+                stroke: var(--primary-color);
+            }
         }
     }
 

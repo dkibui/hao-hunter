@@ -1,12 +1,17 @@
-<nav class="mobile">
+<nav class="mobile" data-controller="menu">
   <div class="nav-menu">
     <?xml version="1.0" ?>
     <svg fill="none" viewBox="4 0 16 24" class="hamburger-menu"
-         xmlns="http://www.w3.org/2000/svg"><path d="M4 6H20M4 12H20M4 18H20" stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/></svg>
+         xmlns="http://www.w3.org/2000/svg"
+         data-action="click->menu#toggle">
+      <path d="M4 6H20M4 12H20M4 18H20" stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </svg>
+
     <div class="logo">
       <%= link_to raw(render "partials/logo"), root_path %>
     </div>
-    <div class="menu-links">
+
+    <div class="menu-links" data-menu-target="menu">
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Properties</a></li>
@@ -14,6 +19,7 @@
         <li><a href="#">Contact</a></li>
       </ul>
     </div>
+
     <% if user_signed_in? %>
       <%= button_to "Logout", destroy_user_session_path, method: :delete %>
     <% else %>
