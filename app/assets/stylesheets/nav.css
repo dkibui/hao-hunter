@@ -1,13 +1,74 @@
+nav.desktop {
+    display: none;
+
+    .menu-links {
+        margin-right: auto;
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+
+            li {
+                list-style: none;
+            }
+        }
+    }
+}
+
+nav.mobile {
+    .menu-links {
+        background-color: color-mix(in oklab, var(--primary-color) 8%, white 92%);
+        width: 75%;
+        padding: 2.85rem 0.5rem;
+        position: absolute;
+        z-index: 1000;
+        top: 0 ;
+        left: 0;
+        bottom: 0;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        transform: translateX(-603px);
+        transition: transform 0.25s ease-in-out;
+
+        &.active {
+            transform: translateX(0);
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 2rem 0 0 0;
+
+            li {
+                list-style: none;
+                padding: 1.25rem 0 1.25rem 0.6rem;
+                border-bottom: 1px solid var(--border-color-normal);
+
+                a {
+                    text-decoration: none;
+
+                    &:hover {
+
+                    }
+                }
+            }
+        }
+    }
+}
+
 nav {
-    background-color: var(--primary-color);
+    background-color: color-mix(in oklab, var(--primary-color) 15%, white 85%);
     padding: 1.125rem;
 
-    svg {
+    .logo svg {
         max-width: 120px;
+        fill: var(--primary-color);
     }
 
     a {
-        color: white;
+        color: color-mix(in oklab, var(--charcoal) 80%, white 20%);
         display: inline-block;
         height: fit-content;
         text-decoration: none;
@@ -16,6 +77,7 @@ nav {
         &:hover {
             cursor: pointer;
             text-decoration: underline;
+            color: var(--primary-color);
         }
     }
 
@@ -25,6 +87,17 @@ nav {
         justify-content: space-between;
         gap: 0.75rem;
         flex-wrap: wrap;
+
+        .hamburger-menu {
+            width: 28px;
+            stroke: color-mix(in oklab, var(--charcoal) 80%, white 20%);
+            z-index: 2000;
+            cursor: pointer;
+
+            &:hover {
+                stroke: var(--primary-color);
+            }
+        }
     }
 
     button {
@@ -39,5 +112,15 @@ nav {
         &:hover {
             cursor: pointer;
         }
+    }
+}
+
+@media (min-width: 768px) {
+    nav.mobile {
+        display: none;
+    }
+
+    nav.desktop {
+        display: block;
     }
 }
