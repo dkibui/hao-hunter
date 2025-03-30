@@ -1,0 +1,44 @@
+<div class="search-filter-wrapper">
+  <div class="hero-area">
+    <div class="image-wrapper">
+      <%= image_tag("hero/beautiful-home.webp", srcset: {
+        "hero/beautiful-home.webp" => "1x",
+        "hero/beautiful-home@x2.webp" => "2x",
+        "hero/beautiful-home@x3.webp" => "3x"
+      }, class: "hero-image") %>
+
+      <button class="left hero-arrow-navigator">
+        &#9664;
+      </button>
+
+      <button class="right hero-arrow-navigator">
+        &#9654;
+      </button>
+    </div>
+
+    <div class="hero-message">
+      <h1>The <span>#1</span> place to find your next home</h1>
+    </div>
+
+  </div>
+  <div class="search-filter">
+    <%= form_with do |form| %>
+      <select class="p-2 rounded-lg border">
+        <option>Category</option>
+        <option>Apartment</option>
+        <option>House</option>
+      </select>
+
+      <input type="number" min="1" max="10000000" placeholder="Enter min">
+      <input type="number" min="1" max="10000000" placeholder="Enter max">
+
+      <select class="p-2 rounded-lg border">
+        <option>Status</option>
+        <option>For Rent</option>
+        <option>For Sale</option>
+      </select>
+
+      <%= form.submit "Search" %>
+    <% end %>
+  </div>
+</div>
