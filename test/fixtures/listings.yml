@@ -5,15 +5,15 @@ one:
   rent_amount: 15000
   bedrooms: 26
   bathrooms: 20
-  latitude: 1.5
-  longitude: 1.5
-  status: true
+  latitude: 34.0522
+  longitude: -118.2437
+  status: published
 
 two:
   title: Hill View Arcade
   rent_amount: 25000
   bedrooms: 4
   bathrooms: 5
-  latitude: 1.5
-  longitude: 1.5
-  status: true
+  latitude: 34.0522
+  longitude: -118.2437
+  status: published
