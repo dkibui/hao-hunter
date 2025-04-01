@@ -1,28 +1,32 @@
 <div class="wide-container">
 
-  <%= render "/partials/main-hero" %>
-
-  <div class="listing">
-    <h1>All listings</h1>
-    <%= link_to "New listing", new_listing_path if user_signed_in? %>
-    <div class="cards-container">
-      <% @listings.each do |listing| %>
-        <div class="card">
-          <div class="image-wrapper">
-            <%= image_tag listing.images.first %>
+    <%= render "/partials/main-hero" %>
+  
+    <div class="listing">
+      <h1>All listings</h1>
+      <%= link_to "New listing", new_listing_path if user_signed_in? %>
+      <div class="cards-container">
+        <% @listings.each do |listing| %>
+          <div class="card">
+            <div class="image-wrapper">
+              <% if listing.images.present? && listing.images.first.present? %>
+                <%= image_tag listing.images.first %>
+              <% else %>
+                <span>No Image Available</span>
+              <% end %>
+            </div>
+            <h2><%= link_to truncate(listing.title, length: 36), listing %></h2>
+            <h3><%= number_to_currency(listing.rent_amount,
+                                       precision: 2,
+                                       delimiter: ",",
+                                       separator: ".",
+                                       unit: "Ksh ") %> per month</h3>
+            <div class="bath-and-bedrooms">
+              <p><%= listing.bedrooms %> Bedrooms</p>
+              <p><%= listing.bathrooms %> Bathrooms</p>
+            </div>
           </div>
-          <h2><%= link_to truncate(listing.title, length: 36), listing %></h2>
-          <h3><%= number_to_currency(listing.rent_amount,
-                                     precision: 2,
-                                     delimiter: ",",
-                                     separator: ".",
-                                     unit: "Ksh ") %> per month</h3>
-          <div class="bath-and-bedrooms">
-            <p><%= listing.bedrooms %> Bedrooms</p>
-            <p><%= listing.bathrooms %> Bathrooms</p>
-          </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
