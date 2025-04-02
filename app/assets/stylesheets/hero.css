@@ -8,46 +8,33 @@
         overflow: hidden;
         border-radius: 1rem;
 
-        .image-wrapper {
-            .left {
-                left: 8px;
+        .hero-arrow-navigator-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
 
-                .left-arrow {
-                    width: 0.75em;
-                    fill: var(--charcoal);
-                    transform: scaleX(-1);
-                    transform-origin: 50% 50%;
-                    margin-right: 4px;
-                }
+            .hero-arrow-navigator {
+                width: 24px;
+                height: 24px;
+                cursor: pointer;
+            }
+
+            .left {
+                margin-left: 8px;
+                transform-origin: center;
+                transform: rotate(180deg)
             }
 
             .right {
-                right: 8px;
-
-                .right-arrow {
-                    width: 0.75em;
-                    fill: var(--charcoal);
-                    transform-origin: 50% 50%;
-                    margin-left: 2px;
-                }
+                margin-right: 8px;
             }
+        }
 
-            .hero-arrow-navigator {
-                border: none;
-                width: 24px;
-                height: 24px;
-                position: absolute;
-                top: 50%;
-                transform: translate(0, -50%);
-                border-radius: 50%;
-                background-color: #ffffff;
-                cursor: pointer;
-                padding: 4px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
+        .image-wrapper {
             .hero-image {
                 width: 100%;
                 object-fit: cover;
@@ -128,18 +115,18 @@
 @media (min-width: 768px) {
     .search-filter-wrapper {
         .hero-area {
-            .image-wrapper {
+            .hero-arrow-navigator-wrapper {
+                .hero-arrow-navigator {
+                    width: 32px;
+                    height: 32px;
+                }
+
                 .left {
-                    left: 20px;
+                    margin-left: 12px;
                 }
 
                 .right {
-                    right: 20px;
-                }
-
-                .hero-arrow-navigator {
-                    width: 36px;
-                    height: 36px;
+                    margin-right: 12px;
                 }
             }
 

@@ -1,19 +1,21 @@
 <div class="search-filter-wrapper">
   <div class="hero-area">
+    <div class="hero-arrow-navigator-wrapper">
+      <div class="left hero-arrow-navigator">
+        <%= render "/partials/navigation-icon" %>
+      </div>
+
+      <div class="right hero-arrow-navigator">
+        <%= render "/partials/navigation-icon" %>
+      </div>
+    </div>
+
     <div class="image-wrapper">
       <%= image_tag("hero/beautiful-home.webp", srcset: {
         "hero/beautiful-home.webp" => "1x",
         "hero/beautiful-home@x2.webp" => "2x",
         "hero/beautiful-home@x3.webp" => "3x"
       }, class: "hero-image") %>
-
-      <button class="left hero-arrow-navigator">
-        <%= render "/partials/left-navigation-icon" %>
-      </button>
-
-      <button class="right hero-arrow-navigator">
-        <%= render "/partials/right-navigation-icon" %>
-      </button>
     </div>
 
     <div class="hero-message">
@@ -29,8 +31,8 @@
         <option>House</option>
       </select>
 
-      <input type="number" min="1" max="10000000" placeholder="Enter min">
-      <input type="number" min="1" max="10000000" placeholder="Enter max">
+      <input type="number" min="1" max="10000000" placeholder="Enter min price">
+      <input type="number" min="1" max="10000000" placeholder="Enter max price">
 
       <select class="p-2 rounded-lg border">
         <option>Status</option>
