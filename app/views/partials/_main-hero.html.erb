@@ -17,6 +17,11 @@
         "hero/beautiful-home@x3.webp" => "3x"
       }, class: "hero-image") %>
     </div>
+    <% @hero_images.each do |hero_image| %>
+      <% if hero_image.image %>
+        <img src="<%= hero_image.image_url(:large) %>" alt="Hero Image">
+      <% end %>
+    <% end %>
 
     <div class="hero-message">
       <h1>The <span>#1</span> place to find your next home</h1>

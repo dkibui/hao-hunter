@@ -2,6 +2,7 @@ class ListingsController < ApplicationController
   before_action :set_listing, only: %i[ show edit update destroy ]
 
   def index
+    @hero_images = HeroImage.all
     @listings = Listing.all
   end
 
